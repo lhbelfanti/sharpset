@@ -13,7 +13,7 @@
 
 ## Language definitions
 
-* [Assignation & Variables](#assignation-variables)
+* [Assignation & Variables](#variables)
   + [Examples](#examples)
 * [Show](#show)
   + [Examples](#examples-1)
@@ -28,7 +28,7 @@
 * [Ext](#ext)
   + [Examples](#examples-6)
 
-### Assignation & Variables
+### Assignation & Variables <a name="variables"></a>
 
 Assigns a `set` to a `variable`, or a `variable` to a `variable`.
 
