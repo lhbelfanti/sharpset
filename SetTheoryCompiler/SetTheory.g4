@@ -7,8 +7,6 @@ grammar SetTheory;
 		set
 		| VARIABLE
 		| VARIABLE '=' expression
-		| CREATION_FUNCTION '({' (NUMBER | (NUMBER ',' NUMBER)*)  '})'
-		| CREATION_FUNCTION '(' NUMBER ',' NUMBER ')'
 		| CREATION_FUNCTION '(' NUMBER ',' NUMBER ',' NUMBER ')'
 		| BINARY_FUNCTION '(' expression ',' expression ')'
 		| UNARY_FUNCTION '(' expression ')'
