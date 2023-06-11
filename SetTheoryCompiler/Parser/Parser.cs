@@ -9,7 +9,7 @@ namespace SetTheoryCompiler.Parser
     public class Parser
     {
 	    private ParserState _state;
-	    private List<string> _expressionParsers;
+	    private readonly List<string> _expressionParsers;
 
 	    public Parser()
 	    {
@@ -22,6 +22,7 @@ namespace SetTheoryCompiler.Parser
 			    "MaxExpressionParser",
 			    "MinExpressionParser",
 			    "AvgExpressionParser",
+			    "IntersectionExpressionParser",
 			    "ExtractExpressionParser"
 		    };
 	    }
@@ -40,7 +41,8 @@ namespace SetTheoryCompiler.Parser
             tokenizer.Add("show", Token.Show);
             tokenizer.Add("max", Token.Maximum);
             tokenizer.Add("min", Token.Minimum);
-            tokenizer.Add("avg", Token.Mean);
+            tokenizer.Add("avg", Token.Avg);
+            tokenizer.Add("int", Token.Intersection);
             tokenizer.Add("ext", Token.Extract);
             tokenizer.Add("[0-9]+", Token.Number);
             tokenizer.Add("[a-z]+", Token.Variable);
@@ -95,13 +97,12 @@ namespace SetTheoryCompiler.Parser
 
         private ExpressionParser InstantiateParser(string expressionParserClassName)
         {
-	        ExpressionParser ep;
 	        string objectToInstantiate = "SetTheoryCompiler.Parser.ExpressionParsers." + expressionParserClassName + ", SetTheoryCompiler";
 	        var objectType = Type.GetType(objectToInstantiate);
 	        if (objectType == null)
 		        throw new Exception("Failed to GetType " + objectToInstantiate);
 		        
-	        ep = Activator.CreateInstance(objectType) as ExpressionParser;
+	        ExpressionParser ep = Activator.CreateInstance(objectType) as ExpressionParser;
 	        if (ep == null)
 		        throw new Exception("Failed to instantiate " + objectToInstantiate);
 

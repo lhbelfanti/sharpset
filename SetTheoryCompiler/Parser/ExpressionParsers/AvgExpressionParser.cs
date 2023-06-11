@@ -10,7 +10,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 	{
 		public override IExpressionNode Parse()
 		{
-			if (_state.Lookahead.TokenId == Token.Mean)
+			if (_state.Lookahead.TokenId == Token.Avg)
 			{
 				_state.NextToken();
 

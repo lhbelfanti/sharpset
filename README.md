@@ -15,18 +15,20 @@
 
 * [Assignation & Variables](#variables)
   + [Examples](#examples)
-* [Show](#show)
+* [show](#show)
   + [Examples](#examples-1)
-* [Set](#set)
+* [set](#set)
   + [Examples](#examples-2)
-* [Max](#max)
+* [max](#max)
   + [Examples](#examples-3)
-* [Min](#min)
+* [min](#min)
   + [Examples](#examples-4)
-* [Avg](#avg)
+* [avg](#avg)
   + [Examples](#examples-5)
-* [Ext](#ext)
+* [int](#int)
   + [Examples](#examples-6)
+* [ext](#ext)
+  + [Examples](#examples-7)
 
 ### Assignation & Variables <a name="variables"></a>
 
@@ -71,6 +73,13 @@ Returns the `min` value from a `set`.
 
 ### avg
 Returns the `avg` value from a `set`.
+
+#### Examples
+
+- `a = [1, 9]`<br> `b = [2, 9]`<br>`int a,b` → returns `[9]`
+
+### int
+Returns the `intersection` between two `sets`.
 
 #### Examples
 

@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using SetTheoryCompiler.Parser.Nodes;
+using SetTheoryCompiler.Tokenizer;
+
+namespace SetTheoryCompiler.Parser.ExpressionParsers
+{
+    public class IntersectionExpressionParser : ExpressionParser
+    {
+        public override IExpressionNode Parse()
+        {
+            if (_state.Lookahead.TokenId == Token.Intersection)
+            {
+                _state.NextToken();
+
+                if (_state.Lookahead.TokenId == Token.Variable)
+                {
+                    String firstVariable = _state.Lookahead.Sequence;
+
+                    _state.NextToken();
+
+                    if (_state.Lookahead.TokenId == Token.Comma)
+                    {
+                        _state.NextToken();
+
+                        if (_state.Lookahead.TokenId == Token.Variable)
+                        {
+                            String secondVariable = _state.Lookahead.Sequence;
+                            
+                            List<int> set1 = _state.GetVariableValue(firstVariable);
+                            List<int> set2 = _state.GetVariableValue(secondVariable);
+                            List<int> intersection = set1.Intersect(set2).ToList();
+                            
+                            return new IntersectionExpressionNode(intersection);
+                        }
+                        
+                        throw new Exception("IntersectionExpressionParser - Syntax error. Second variable missing.");
+                    }
+                    
+                    throw new Exception("IntersectionExpressionParser - Syntax error. Missing comma.");
+                }
+
+                throw new Exception("IntersectionExpressionParser - Syntax error. First variable missing.");
+            }
+
+            return null;
+        }
+    }
+}

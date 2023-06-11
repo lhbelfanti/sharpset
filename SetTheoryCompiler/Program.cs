@@ -11,6 +11,7 @@ namespace SetTheoryCompiler
 	        MaxFunctionDemo();
 	        MinFunctionDemo();
 	        AvgFunctionDemo();
+	        IntFunctionDemo();
 	        ExtFunctionDemo();
         }
 
@@ -60,6 +61,17 @@ namespace SetTheoryCompiler
 	        String code = "a = [6,2]";		// a = [6, 2]
 	        code += "v = avg a ";			// v = avg([6,2]) -> v = (6+2)/2 = 4
 	        code += "show v ";				// [4]
+	        Parser.Parser p = new Parser.Parser();
+	        p.Parse(code);
+        }
+
+        private static void IntFunctionDemo()
+        {
+	        Console.WriteLine("--- Int Function Demo ---");
+	        String code = "a = [6,2]";		// a = [6, 2]
+	        code += "b = [6,3]";			// b = [6, 3]
+	        code += "i = int a,b ";			// i = int([6,2],[6,3])
+	        code += "show i ";				// [6]
 	        Parser.Parser p = new Parser.Parser();
 	        p.Parse(code);
         }

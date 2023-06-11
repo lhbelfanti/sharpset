@@ -6,7 +6,7 @@ namespace SetTheoryCompiler.Tokenizer
 	{
 		public const int Maximum = 0;
 		public const int Minimum = 1;
-		public const int Mean = 2;
+		public const int Avg = 2;
 		public const int Intersection = 3;
 		public const int Union = 4;
 		public const int Extract = 5;

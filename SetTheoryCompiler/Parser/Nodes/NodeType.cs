@@ -11,6 +11,7 @@ namespace SetTheoryCompiler.Parser.Nodes
 		MaxNode,
 		MinNode,
 		AvgNode,
+		IntersectionNode,
 		ExtractNode,
 	}
 }
