@@ -13,15 +13,22 @@
 
 ## Language definitions
 
-* [Assignation & Variables](#variables)
-* [show](#show)
-* [set](#set)
-* [max](#max)
-* [min](#min)
-* [avg](#avg)
-* [ext](#ext)
+* [Assignation & Variables](#assignation-variables)
+  + [Examples](#examples)
+* [Show](#show)
+  + [Examples](#examples-1)
+* [Set](#set)
+  + [Examples](#examples-2)
+* [Max](#max)
+  + [Examples](#examples-3)
+* [Min](#min)
+  + [Examples](#examples-4)
+* [Avg](#avg)
+  + [Examples](#examples-5)
+* [Ext](#ext)
+  + [Examples](#examples-6)
 
-### Assignation & Variables <a name="variables"></a>
+### Assignation & Variables
 
 Assigns a `set` to a `variable`, or a `variable` to a `variable`.
 
