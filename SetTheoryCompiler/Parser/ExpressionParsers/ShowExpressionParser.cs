@@ -7,11 +7,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public class ShowExpressionParser : ExpressionParser
 	{
-		public ShowExpressionParser(ParserState state) : base(state)
-		{
-		}
-
-		protected override IExpressionNode Parse()
+		public override IExpressionNode Parse()
 		{
 			if (_state.Lookahead.TokenId == Token.Show)
 			{

@@ -8,11 +8,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public class AvgExpressionParser : ExpressionParser
 	{
-		public AvgExpressionParser(ParserState state) : base(state)
-		{
-		}
-
-		protected override IExpressionNode Parse()
+		public override IExpressionNode Parse()
 		{
 			if (_state.Lookahead.TokenId == Token.Mean)
 			{

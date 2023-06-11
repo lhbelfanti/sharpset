@@ -8,23 +8,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public class VariableExpressionParser : ExpressionParser
 	{
-		public delegate IExpressionNode ExpressionDelegate();
-
-		private readonly ExpressionDelegate _expression;
-
-		public VariableExpressionParser(ParserState state, ExpressionDelegate expression) : base(state)
-		{
-			_expression = expression;
-			_node = ParseVariable();
-		}
-
-		protected override IExpressionNode Parse()
-		{
-			// We need to set the Expression function first
-			return null;
-		}
-
-		private IExpressionNode ParseVariable()
+		public override IExpressionNode Parse()
 		{
 			if (_state.Lookahead.TokenId == Token.Variable)
 			{
@@ -35,7 +19,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 				if (_state.Lookahead != null && _state.Lookahead.TokenId == Token.Assign)
 				{
 					_state.NextToken();
-					IExpressionNode exp = _expression();
+					IExpressionNode exp = _expressionFunc();
 					variable = exp.GetSet();
 					_state.SaveVariable(variableName, variable);
 				}

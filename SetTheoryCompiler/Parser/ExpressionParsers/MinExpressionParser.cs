@@ -8,12 +8,8 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public class MinExpressionParser : ExpressionParser
 	{
-		public MinExpressionParser(ParserState state) : base(state)
-		{
-		}
-
-		protected override IExpressionNode Parse()
-		{
+		public override IExpressionNode Parse()
+		{;
 			if (_state.Lookahead.TokenId == Token.Minimum)
 			{
 				_state.NextToken();

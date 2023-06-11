@@ -8,11 +8,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public class MaxExpressionParser : ExpressionParser
 	{
-		public MaxExpressionParser(ParserState state) : base(state)
-		{
-		}
-
-		protected override IExpressionNode Parse()
+		public override IExpressionNode Parse()
 		{
 			if (_state.Lookahead.TokenId == Token.Maximum)
 			{

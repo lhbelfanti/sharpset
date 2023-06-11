@@ -4,19 +4,23 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public abstract class ExpressionParser
 	{
-		protected IExpressionNode _node;
-
 		protected ParserState _state;
+		protected ExpressionDelegate _expressionFunc;
+		public delegate IExpressionNode ExpressionDelegate();
 
-		protected abstract IExpressionNode Parse();
+		public abstract IExpressionNode Parse();
 
-		protected ExpressionParser(ParserState state)
+		
+		public ParserState State
 		{
-			_state = state;
-			_node = Parse();
+			get => _state;
+			set => _state = value;
 		}
 
-		public IExpressionNode Node => _node;
-		public ParserState State => _state;
+		public ExpressionDelegate ExpressionFunc
+		{
+			get => _expressionFunc;
+			set => _expressionFunc = value;
+		}
 	}
 }

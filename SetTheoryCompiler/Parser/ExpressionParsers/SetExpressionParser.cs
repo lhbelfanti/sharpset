@@ -7,11 +7,7 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
 {
 	public class SetExpressionParser : ExpressionParser
 	{
-		public SetExpressionParser(ParserState state) : base(state)
-		{
-		}
-
-		protected override IExpressionNode Parse()
+		public override IExpressionNode Parse()
 		{
 			List<int> expression = new List<int>();
 
