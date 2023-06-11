@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using SetTheoryCompiler.Parser.ExpressionParsers;
 using SetTheoryCompiler.Parser.Nodes;
 using SetTheoryCompiler.Tokenizer;
@@ -57,6 +59,7 @@ namespace SetTheoryCompiler.Parser
 
         private IExpressionNode Expression()
         {
+
 	        ExpressionParser ep = new SetExpressionParser(_state);
 	        _state = ep.State;
 	        IExpressionNode node = ep.Node;
@@ -68,7 +71,7 @@ namespace SetTheoryCompiler.Parser
 	        node = ep.Node;
 	        if (node != null)
 		        return node;
-
+	        
 	        ep = new CreationExpressionParser(_state);
 	        _state = ep.State;
 	        node = ep.Node;
@@ -104,6 +107,50 @@ namespace SetTheoryCompiler.Parser
 	        node = ep.Node;
 	        if (node != null)
 		        return node;
+
+	        return null;
+        }
+        
+        // TODO: Try to fix: obtain the correct assembly when called from tests projects
+        private IExpressionNode ExpressionWithReflection()
+        {
+	        ExpressionParser ep;
+	        IExpressionNode node;
+	        
+	        List<string> expressionParsers = new List<string>()
+	        {
+		        "SetExpressionParser",
+		        "VariableExpressionParser",
+		        "CreationExpressionParser",
+		        "ShowExpressionParser",
+		        "MaxExpressionParser",
+		        "MinExpressionParser",
+		        "AvgExpressionParser",
+		        "ExtractExpressionParser"
+	        };
+
+	        foreach (string expressionClassName in expressionParsers)
+	        {
+		        var assembly = Assembly.GetExecutingAssembly();
+		        var type = assembly.GetTypes().First(t => t.Name == expressionClassName);
+
+		        if (expressionClassName == "VariableExpressionParser")
+		        {
+			        ep = new VariableExpressionParser(_state, Expression);
+			        _state = ep.State;
+			        node = ep.Node;
+			        if (node != null)
+				        return node;
+		        }
+		        else
+		        {
+			        ep = (ExpressionParser)Activator.CreateInstance(type, _state);
+			        _state = ep.State;
+			        node = ep.Node;
+			        if (node != null)
+				        return node;
+		        }
+	        }
 
 	        return null;
         }
