@@ -13,6 +13,8 @@
 
 ## Language definitions
 
+**ANTLR4:** The grammar of this project is defined inside the [SetTheory.g4](./SetTheoryCompiler/SetTheory.g4)
+
 * [Assignation & Variables](#variables)
   + [Example](#example)
 * [show](#show)
@@ -35,6 +37,8 @@
   + [Example](#example-9)
 * [add](#add)
   + [Example](#example-10)
+* [del](#del)
+  + [Example](#example-11)
 
 ### Assignation & Variables <a name="variables"></a>
 
@@ -121,8 +125,12 @@ Returns the `length` (number of elements) of a `set`.
 
 - `a = [1,9]`<br> `add a,4` → returns `[1,9,4]`
 
-### ANTLR4
-The grammar of this project is defined inside the [SetTheory.g4](./SetTheoryCompiler/SetTheory.g4)
+### del
+`Deletes` an element from a `set`.
+
+#### Example
+
+- `a = [1,9]`<br> `del a,9` → returns `[1]`
 
 ## Examples
 Inside the SetTheoryCompiler Project, there is a [Program.cs](./SetTheoryCompiler/Program.cs) file that contains many examples of how the different operations work.
@@ -131,5 +139,3 @@ Inside the SetTheoryCompiler Project, there is a [Program.cs](./SetTheoryCompile
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-

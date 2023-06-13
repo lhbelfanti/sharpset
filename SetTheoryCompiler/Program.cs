@@ -123,6 +123,11 @@ namespace SetTheoryCompiler
         private static void DelFunctionDemo()
         {
 	        Console.WriteLine("--- Del Function Demo ---");
+	        String code = "a = [6,2] ";		// k = [6, 2]
+	        code += "d = del a,2 ";			// a = del([6, 2], 2)
+	        code += "show d ";				// [6]
+	        Parser.Parser p = new Parser.Parser();
+	        p.Parse(code);
 
         }
     }
