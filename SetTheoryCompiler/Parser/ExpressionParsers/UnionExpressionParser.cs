@@ -30,9 +30,9 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
                             
                             List<int> set1 = _state.GetVariableValue(firstVariable);
                             List<int> set2 = _state.GetVariableValue(secondVariable);
-                            List<int> intersection = set1.Union(set2).ToList();
+                            List<int> union = set1.Union(set2).ToList();
                             
-                            return new IntersectionExpressionNode(intersection);
+                            return new UnionExpressionNode(union);
                         }
                         
                         throw new Exception("UnionExpressionParser - Syntax error. Expected 2 argument, only 1 given.");
