@@ -33,6 +33,8 @@
   + [Example](#example-8)
 * [len](#len)
   + [Example](#example-9)
+* [add](#add)
+  + [Example](#example-10)
 
 ### Assignation & Variables <a name="variables"></a>
 
@@ -111,6 +113,13 @@ Returns the `length` (number of elements) of a `set`.
 #### Example
 
 - `a = [1,2,3]`<br> `len a` → returns `[3]`
+
+### add
+`Adds` an element to a `set`.
+
+#### Example
+
+- `a = [1,9]`<br> `add a,4` → returns `[1,9,4]`
 
 ### ANTLR4
 The grammar of this project is defined inside the [SetTheory.g4](./SetTheoryCompiler/SetTheory.g4)

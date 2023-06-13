@@ -94,7 +94,7 @@ namespace SetTheoryCompiler
         {
 	        Console.WriteLine("--- Ext Function Demo ---");
 	        String code = "a = [6,2] ";		// a = [6, 2]
-	        code += "e = ext a,0 ";			// e = ext([6, 2])
+	        code += "e = ext a,0 ";			// e = ext([6, 2], 0)
 	        code += "show e ";				// [2]
 	        Parser.Parser p = new Parser.Parser();
 	        p.Parse(code);
@@ -113,7 +113,11 @@ namespace SetTheoryCompiler
         private static void AddFunctionDemo()
         {
 	        Console.WriteLine("--- Add Function Demo ---");
-
+	        String code = "k = [6,2] ";		// k = [6, 2]
+	        code += "a = add k,9 ";			// a = add([6, 2], 9)
+	        code += "show a ";				// [6,2,9]
+	        Parser.Parser p = new Parser.Parser();
+	        p.Parse(code);
         }
         
         private static void DelFunctionDemo()
