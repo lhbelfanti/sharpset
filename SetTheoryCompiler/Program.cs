@@ -14,6 +14,9 @@ namespace SetTheoryCompiler
 	        IntFunctionDemo();
 	        UniFunctionDemo();
 	        ExtFunctionDemo();
+	        LenFunctionDemo();
+	        AddFunctionDemo();
+	        DelFunctionDemo();
         }
 
         private static void VariablesDemo()
@@ -95,6 +98,24 @@ namespace SetTheoryCompiler
 	        code += "show e ";				// [2]
 	        Parser.Parser p = new Parser.Parser();
 	        p.Parse(code);
+        }
+        
+        private static void LenFunctionDemo()
+        {
+	        Console.WriteLine("--- Len Function Demo ---");
+
+        }
+        
+        private static void AddFunctionDemo()
+        {
+	        Console.WriteLine("--- Add Function Demo ---");
+
+        }
+        
+        private static void DelFunctionDemo()
+        {
+	        Console.WriteLine("--- Del Function Demo ---");
+
         }
     }
 }

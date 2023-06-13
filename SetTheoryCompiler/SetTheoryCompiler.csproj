@@ -43,18 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parser\ExpressionParsers\AddExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\AvgExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\CreationExpressionParser.cs" />
+    <Compile Include="Parser\ExpressionParsers\DeleteExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\ExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\ExtractExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\IntersectionExpressionParser.cs" />
+    <Compile Include="Parser\ExpressionParsers\LengthExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\MaxExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\MinExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\SetExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\ShowExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\UnionExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\VariableExpressionParser.cs" />
+    <Compile Include="Parser\Nodes\AddExpressionNode.cs" />
+    <Compile Include="Parser\Nodes\DeleteExpressionNode.cs" />
     <Compile Include="Parser\Nodes\IntersectionExpressionNode.cs" />
+    <Compile Include="Parser\Nodes\LengthExpressionNode.cs" />
     <Compile Include="Parser\Nodes\NodeType.cs" />
     <Compile Include="Parser\Nodes\SetExpressionNode.cs" />
     <Compile Include="Parser\Nodes\CreationExpressionNode.cs" />

@@ -24,7 +24,10 @@ namespace SetTheoryCompiler.Parser
 			    "AvgExpressionParser",
 			    "IntersectionExpressionParser",
 			    "UnionExpressionParser",
-			    "ExtractExpressionParser"
+			    "ExtractExpressionParser",
+			    "LenghtExpressionParser",
+			    "AddExpressionParser",
+			    "DeleteExpressionParser"
 		    };
 	    }
 	    
@@ -46,6 +49,9 @@ namespace SetTheoryCompiler.Parser
             tokenizer.Add("int", Token.Intersection);
             tokenizer.Add("uni", Token.Union);
             tokenizer.Add("ext", Token.Extract);
+            tokenizer.Add("len", Token.Length);
+            tokenizer.Add("add", Token.Add);
+            tokenizer.Add("del", Token.Delete);
             tokenizer.Add("[0-9]+", Token.Number);
             tokenizer.Add("[a-z]+", Token.Variable);
 

@@ -51,9 +51,12 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AddExpressionTests.cs" />
         <Compile Include="AvgExpressionTests.cs" />
+        <Compile Include="DeleteExpressionTests.cs" />
         <Compile Include="ExtractExpressionTests.cs" />
         <Compile Include="IntersectionExpressionTests.cs" />
+        <Compile Include="LengthExpressionTests.cs" />
         <Compile Include="MaxExpressionTests.cs" />
         <Compile Include="MinExpressionTests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

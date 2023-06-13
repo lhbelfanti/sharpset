@@ -13,5 +13,8 @@ namespace SetTheoryCompiler.Parser.Nodes
 		IntersectionNode,
 		UnionNode,
 		ExtractNode,
+		LengthNode,
+		AddNode,
+		DeleteNode,
 	}
 }
