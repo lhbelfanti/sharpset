@@ -60,6 +60,7 @@
         <Compile Include="CreationExpressionTests.cs" />
         <Compile Include="SetExpressionTests.cs" />
         <Compile Include="ShowExpressionTests.cs" />
+        <Compile Include="UnionExpressionTest.cs" />
         <Compile Include="VariableExpressionTests.cs" />
     </ItemGroup>
     <ItemGroup>

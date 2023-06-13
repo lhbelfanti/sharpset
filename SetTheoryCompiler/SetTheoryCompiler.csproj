@@ -52,6 +52,7 @@
     <Compile Include="Parser\ExpressionParsers\MinExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\SetExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\ShowExpressionParser.cs" />
+    <Compile Include="Parser\ExpressionParsers\UnionExpressionParser.cs" />
     <Compile Include="Parser\ExpressionParsers\VariableExpressionParser.cs" />
     <Compile Include="Parser\Nodes\IntersectionExpressionNode.cs" />
     <Compile Include="Parser\Nodes\NodeType.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Parser\Nodes\MinExpressionNode.cs" />
     <Compile Include="Parser\Nodes\ShowExpressionNode.cs" />
     <Compile Include="Parser\Nodes\NumberExpressionNode.cs" />
+    <Compile Include="Parser\Nodes\UnionExpressionNode.cs" />
     <Compile Include="Parser\Nodes\VariableExpressionNode.cs" />
     <Compile Include="Parser\Parser.cs" />
     <Compile Include="Parser\ParserState.cs" />

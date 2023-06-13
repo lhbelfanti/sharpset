@@ -27,8 +27,10 @@
   + [Examples](#examples-5)
 * [int](#int)
   + [Examples](#examples-6)
-* [ext](#ext)
+* [uni](#uni)
   + [Examples](#examples-7)
+* [ext](#ext)
+  + [Examples](#examples-8)
 
 ### Assignation & Variables <a name="variables"></a>
 
@@ -61,7 +63,7 @@ Returns the `max` value from a `set`.
 
 #### Examples
 
-- `a = [1, 9]`<br>`max a` → returns `[9]`
+- `a = [1,9]`<br>`max a` → returns `[9]`
 
 ### min
 
@@ -69,21 +71,28 @@ Returns the `min` value from a `set`.
 
 #### Examples
 
-- `a = [1, 9]`<br>`min a` → returns `[1]`
+- `a = [1,9]`<br>`min a` → returns `[1]`
 
 ### avg
 Returns the `avg` value from a `set`.
 
 #### Examples
 
-- `a = [1, 9]`<br> `b = [2, 9]`<br>`int a,b` → returns `[9]`
+- `a = [1,9]`<br>`avg a` → returns `[5]`
 
 ### int
 Returns the `intersection` between two `sets`.
 
 #### Examples
 
-- `a = [1, 9]`<br>`avg a` → returns `[5]`
+- `a = [1,9]`<br> `b = [2,9]`<br>`int a,b` → returns `[9]`
+
+### uni
+Returns the `union` between two `sets`.
+
+#### Examples
+
+- `a = [1,9]`<br> `b = [2,9]`<br>`uni a,b` → returns `[1,9,2]`
 
 ### ext
 Removes a value from a `set`, based on the following parameters:
@@ -92,7 +101,7 @@ Removes a value from a `set`, based on the following parameters:
 
 #### Examples
 
-- `a = [1, 5, 9]`<br>`ext a,0` → removes the first element from the `set`, so, the result will be the `set` without that element → `[5,9]`
+- `a = [1,5,9]`<br>`ext a,0` → removes the first element from the `set`, so, the result will be the `set` without that element → `[5,9]`
 
 ### ANTLR4
 The grammar of this project is defined inside the [SetTheory.g4](./SetTheoryCompiler/SetTheory.g4)

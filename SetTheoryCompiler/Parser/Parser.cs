@@ -23,6 +23,7 @@ namespace SetTheoryCompiler.Parser
 			    "MinExpressionParser",
 			    "AvgExpressionParser",
 			    "IntersectionExpressionParser",
+			    "UnionExpressionParser",
 			    "ExtractExpressionParser"
 		    };
 	    }
@@ -43,6 +44,7 @@ namespace SetTheoryCompiler.Parser
             tokenizer.Add("min", Token.Minimum);
             tokenizer.Add("avg", Token.Avg);
             tokenizer.Add("int", Token.Intersection);
+            tokenizer.Add("uni", Token.Union);
             tokenizer.Add("ext", Token.Extract);
             tokenizer.Add("[0-9]+", Token.Number);
             tokenizer.Add("[a-z]+", Token.Variable);

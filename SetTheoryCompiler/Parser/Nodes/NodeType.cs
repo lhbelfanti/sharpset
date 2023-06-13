@@ -2,7 +2,6 @@ namespace SetTheoryCompiler.Parser.Nodes
 {
 	public enum NodeType
 	{
-		ExpressionNode,
 		VariableNode,
 		SetNode,
 		NumberNode,
@@ -12,6 +11,7 @@ namespace SetTheoryCompiler.Parser.Nodes
 		MinNode,
 		AvgNode,
 		IntersectionNode,
+		UnionNode,
 		ExtractNode,
 	}
 }
