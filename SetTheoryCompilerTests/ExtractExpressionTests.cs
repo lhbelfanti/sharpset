@@ -40,9 +40,28 @@ namespace SetTheoryCompilerTests
 				Assert.Equal(want, got);
 			}
 		}
-
+		
 		[Fact]
-		public void Test_ExtractExpression_Fails_MissingOneParameter()
+		public void Test_ExtractExpression_Fails_MissingBothParameter()
+		{
+			String code = "a = [6,2]";
+			code += "e = ext ";
+			code += "show e ";
+
+			Parser p = new Parser();
+			try {
+				p.Parse(code);
+				// The assert should fail because no exception was thrown
+				Assert.False(true);
+			} catch (Exception e) {
+				string got = e.Message;
+				string want = "ExtractExpressionParser - Syntax error. Expected 2 arguments.";
+				Assert.Equal(want, got);
+			}
+		}
+		
+		[Fact]
+		public void Test_ExtractExpression_Fails_MissingCommaAfterFirstParameter()
 		{
 			String code = "a = [6,2]";
 			code += "e = ext a ";
@@ -59,12 +78,12 @@ namespace SetTheoryCompilerTests
 				Assert.Equal(want, got);
 			}
 		}
-
+		
 		[Fact]
-		public void Test_ExtractExpression_Fails_MissingBothParameter()
+		public void Test_ExtractExpression_Fails_MissingOneParameter()
 		{
 			String code = "a = [6,2]";
-			code += "e = ext ";
+			code += "e = ext a, ";
 			code += "show e ";
 
 			Parser p = new Parser();
@@ -74,7 +93,7 @@ namespace SetTheoryCompilerTests
 				Assert.False(true);
 			} catch (Exception e) {
 				string got = e.Message;
-				string want = "ExtractExpressionParser - Syntax error. Expected 2 arguments.";
+				string want = "ExtractExpressionParser - Syntax error. Expected 2 argument, only 1 given.";
 				Assert.Equal(want, got);
 			}
 		}

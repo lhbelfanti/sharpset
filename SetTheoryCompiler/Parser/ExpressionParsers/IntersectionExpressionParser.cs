@@ -35,13 +35,13 @@ namespace SetTheoryCompiler.Parser.ExpressionParsers
                             return new IntersectionExpressionNode(intersection);
                         }
                         
-                        throw new Exception("IntersectionExpressionParser - Syntax error. Second variable missing.");
+                        throw new Exception("IntersectionExpressionParser - Syntax error. Expected 2 argument, only 1 given.");
                     }
-                    
-                    throw new Exception("IntersectionExpressionParser - Syntax error. Missing comma.");
+
+                    throw new Exception("IntersectionExpressionParser - Syntax error. Expected comma after variable.");
                 }
 
-                throw new Exception("IntersectionExpressionParser - Syntax error. First variable missing.");
+                throw new Exception("IntersectionExpressionParser - Syntax error. Expected 2 arguments.");
             }
 
             return null;

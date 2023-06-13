@@ -53,6 +53,7 @@
     <ItemGroup>
         <Compile Include="AvgExpressionTests.cs" />
         <Compile Include="ExtractExpressionTests.cs" />
+        <Compile Include="IntersectionExpressionTests.cs" />
         <Compile Include="MaxExpressionTests.cs" />
         <Compile Include="MinExpressionTests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
