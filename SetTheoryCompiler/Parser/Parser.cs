@@ -25,7 +25,7 @@ namespace SetTheoryCompiler.Parser
 			    "IntersectionExpressionParser",
 			    "UnionExpressionParser",
 			    "ExtractExpressionParser",
-			    "LenghtExpressionParser",
+			    "LengthExpressionParser",
 			    "AddExpressionParser",
 			    "DeleteExpressionParser"
 		    };

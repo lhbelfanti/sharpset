@@ -7,7 +7,7 @@ namespace SetTheoryCompilerTests
     public class UnionExpressionTest
     {
         [Fact]
-        public void Test_UnionExpression_Success_ObtainsIntersectionBetweenTwoSets()
+        public void Test_UnionExpression_Success_ObtainsUnionBetweenTwoSets()
         {
         	String code = "a = [6,2]";
             code += "b = [6,3]";
