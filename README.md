@@ -1,44 +1,30 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="media/sharpset-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="media/sharpset-light.png">
-    <img alt="Sharpset - Compiler for a Set Theory language, written in C#." src="media/sharpset-dark.png">
-  </picture>
+<p align="center">
+  <img src="media/sharpset.png" width="100" alt="Repository logo" />
+</p>
+<h3 align="center">Sharpset</h3>
+<p align="center">Compiler for a Set Theory language, written in C#<p>
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/lhbelfanti/sharpset?label=Repo%20size" alt="Repo size" />
+    <img src="https://img.shields.io/github/license/lhbelfanti/sharpset?label=License" alt="License" />
+</p>
 
-  <br />
-
-  ![GitHub repo size](https://img.shields.io/github/repo-size/lhbelfanti/sharpset?style=for-the-badge)
-  ![License](https://img.shields.io/github/license/lhbelfanti/sharpset?style=for-the-badge)
-</div>
-
+---
 ## Language definitions
 
 **ANTLR4:** The grammar of this project is defined inside the [SetTheory.g4](./SetTheoryCompiler/SetTheory.g4)
 
 * [Assignation & Variables](#variables)
-  + [Example](#example)
 * [show](#show)
-  + [Example](#example-1)
 * [set](#set)
-  + [Example](#example-2)
 * [max](#max)
-  + [Example](#example-3)
 * [min](#min)
-  + [Example](#example-4)
 * [avg](#avg)
-  + [Example](#example-5)
 * [int](#int)
-  + [Example](#example-6)
 * [uni](#uni)
-  + [Example](#example-7)
 * [ext](#ext)
-  + [Example](#example-8)
 * [len](#len)
-  + [Example](#example-9)
 * [add](#add)
-  + [Example](#example-10)
 * [del](#del)
-  + [Example](#example-11)
 
 ### Assignation & Variables <a name="variables"></a>
 
